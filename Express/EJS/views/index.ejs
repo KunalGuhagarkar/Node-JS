@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <%
+        const myVariable = "This is Variable";
+        const name = "Kunal";
+    %>
+
+    <!-- Output -escaped -->
+    <h1><%= myVariable %></h1>
+    
+    <!-- Output -unescaped -->
+    <h1><%- "<h1>Hello</h1>" %></h1>
+
+    <!-- JavaScript Logic -->
+    <% if (name) { %>
+        <h1>Welcome <%=name%></h1>
+    <% } %>
+
+    <!-- EJS comment -->
+    <%# This is a comment %>
+
+    <!-- Escape EJS syntax -->
+    <%% This is what an EJS tag looks like %>
+
+    <!-- Insert another EJS file -->
+    <%- include("header.ejs") %>
+
+
+</body>
+</html>
