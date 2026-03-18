@@ -11,5 +11,8 @@
         <input type="text" name="lName" placeholder="Last Name">
         <input type="submit" value="OK">
     </form>
+    <% if(locals.formdata) { %>
+        <h1>You are <%= formdata %></h1>
+    <% } %>
 </body>
 </html>

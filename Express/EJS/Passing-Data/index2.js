@@ -10,8 +10,8 @@ app.get("/", (req, res) => {
 })
 
 app.post("/submit", (req, res) => {
-    const data = {name: req.body['fName'] + " " + req.body['lName']};
-    console.log(data.name);
+    const formData = req.body['fName'] + " " + req.body['lName'];
+    res.render('index2.ejs', {formdata : formData});
 })
 
 app.listen(3000, () => {
